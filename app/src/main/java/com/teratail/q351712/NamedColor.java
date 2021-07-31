@@ -41,7 +41,7 @@ enum NamedColor {
   /**
    * https://gist.github.com/XiaoxiaoLi/8031146
    */
-  public static final ColorComparator MSECompalator = new ColorComparator() {
+  public static final ColorComparator MSEComparator = new ColorComparator() {
     public double distance(int r1, int g1, int b1, int r2, int g2, int b2) {
       return ((r2 - r1) * (r2 - r1) + (g2 - g1) * (g2 - g1) + (b2 - b1) * (b2 - b1)) / 3.0;
     }
@@ -59,9 +59,9 @@ enum NamedColor {
     }
   };
   /** デフォルト */
-  private static ColorComparator comparator = MSECompalator;
+  private static ColorComparator comparator = MSEComparator;
 
-  public static void setDefaultColorCompalator(ColorComparator comp) {
+  public static void setDefaultColorComparator(ColorComparator comp) {
     if(comp == null) throw new NullPointerException();
     comparator = comp;
   }

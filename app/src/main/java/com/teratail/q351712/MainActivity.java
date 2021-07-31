@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         output0.setText(String.format("%06X", rgb));
         circle0.setColor(rgb);
 
-        NamedColor nc1 = NamedColor.getApproximateColor(rgb, NamedColor.MSECompalator);
+        NamedColor nc1 = NamedColor.getApproximateColor(rgb, NamedColor.MSEComparator);
         output1.setText(nc1 == null ? "(不明)" : nc1.getName());
         circle1.setColor(nc1.getColor().toArgb());
 
